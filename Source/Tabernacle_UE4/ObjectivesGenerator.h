@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Math/UnrealMathUtility.h"
 #include "Containers/UnrealString.h"
+#include "Kismet/GameplayStatics.h"
 #include "ObjectivesGenerator.generated.h"
 
 UCLASS()
@@ -29,6 +30,9 @@ public:
 	UPROPERTY(EditAnywhere)
 		int32 MaxObjectiveNum;
 
+	UPROPERTY(EditAnywhere)
+		TArray<FName> LevelNames;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -39,4 +43,28 @@ public:
 
 	UFUNCTION()
 		void RandomObjective(int32 MinTile, int32 MaxTile, int32 MaxObj);
+
+	UFUNCTION()
+		void SpawnMap(int32 Path1Seed, int32 Path2Seed, int32 Path3Seed, int32 Path4Seed, TArray<FName> namesOfLevels);
+
+	UFUNCTION()
+		void LoadLevel4();
+
+	UFUNCTION()
+		void LoadLevel6();
+
+	UFUNCTION()
+		void LoadLevel8();
+
+	UFUNCTION()
+		void LoadLevel10();
+
+	UFUNCTION()
+		void LoadLevel12();
+
+	UFUNCTION()
+		void LoadLevel14();
+
+	UFUNCTION()
+		void LoadLevel16();
 };
