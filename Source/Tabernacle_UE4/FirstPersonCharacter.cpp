@@ -15,10 +15,6 @@ AFirstPersonCharacter::AFirstPersonCharacter()
 void AFirstPersonCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	check(GEngine != nullptr);
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("We are using FirstpersonCharacter."));
 }
 
 // Called every frame
@@ -67,19 +63,19 @@ void AFirstPersonCharacter::Interact()
 {
 	check(GEngine != nullptr);
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("Interact"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Interact"));
 }
 
 void AFirstPersonCharacter::SwitchReticule()
 {
 	check(GEngine != nullptr);
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("Switch Reticule"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Switch Reticule"));
 }
 
 void AFirstPersonCharacter::PauseGame()
 {
 	check(GEngine != nullptr);
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("Pause"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Pause"));
 }
