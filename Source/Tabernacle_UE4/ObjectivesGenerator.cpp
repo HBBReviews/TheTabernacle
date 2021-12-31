@@ -152,6 +152,13 @@ FString AObjectivesGenerator::GetObjective()
 	return Objective;
 }
 
+void AObjectivesGenerator::CompleteObjective()
+{
+	check(GEngine != nullptr);
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, "Task Completed");
+}
+
 void AObjectivesGenerator::LoadLevel4()
 {
 	++LatentInfo.UUID;

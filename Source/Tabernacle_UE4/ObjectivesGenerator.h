@@ -54,6 +54,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		FString GetObjective();
 
+	UFUNCTION(BlueprintCallable)
+		void CompleteObjective();
+
 	UFUNCTION()
 		void LoadLevel4();
 
